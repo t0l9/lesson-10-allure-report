@@ -74,6 +74,7 @@ public class SelenideStepsTest {
     void githubTestWithWebSteps(){
 
         WebSteps webSteps = new WebSteps();
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
         webSteps.openPage(baseUrl)
                 .searchRepository(REPOSITORY)
